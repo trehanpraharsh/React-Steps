@@ -1,3 +1,7 @@
+# React-Steps
+
+This is just a small react app, through which I learned the use of the "useState" hook.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
