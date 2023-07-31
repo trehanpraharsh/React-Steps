@@ -1,6 +1,6 @@
 # React-Steps
 
-This is just a small react app, through which I learned the use of the "useState"
+This is just a small react app, through which I learned the use of the "useState" hook.
 
 # Getting Started with Create React App
 
