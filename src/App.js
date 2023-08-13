@@ -7,6 +7,15 @@ const messages = [
 ];
 
 function App() {
+  return (
+    <div>
+      <Steps />
+      {/* <Steps /> */}
+    </div>
+  );
+}
+
+function Steps() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -32,27 +41,54 @@ function App() {
             <div className={step >= 3 ? "active" : ""}>3</div>
           </div>
 
-          <p className="message">
+          {/* //* STEPBUTTON CHILDREN PROP */}
+          {/* //! STEPBUTTON CHILDREN PROP */}
+          <StepMessage kadam={step}> {messages[step - 1]} </StepMessage>
+
+          {/* <p className="message">
             Step {step} : {messages[step - 1]}
-          </p>
+          </p> */}
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handlePrevious}
+            <Buttons
+              bgColor="#7950f2"
+              textColor="#fff"
+              onDabao={handlePrevious}
             >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handleNext}
-            >
-              Next
-            </button>
+              <span>👈</span>Previous
+            </Buttons>
+            <Buttons bgColor="#7950f2" textColor="#fff" onDabao={handleNext}>
+              Next<span>👉</span>
+            </Buttons>
           </div>
         </div>
       )}
     </>
+  );
+}
+
+//* USE OF CHILDREN PROP
+
+function StepMessage({ kadam, children }) {
+  return (
+    <p className="message">
+      Step {kadam} : {children}
+    </p>
+  );
+}
+
+//! USE OF CHILDREN PROP
+
+//? USE OF CHILDREN PROP
+
+function Buttons({ bgColor, textColor, onDabao, children }) {
+  return (
+    <button
+      style={{ backgroundColor: bgColor, color: textColor }}
+      onClick={onDabao}
+    >
+      {children}
+    </button>
   );
 }
 
