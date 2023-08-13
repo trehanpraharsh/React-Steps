@@ -68,6 +68,8 @@ function Steps() {
 }
 
 //* USE OF CHILDREN PROP
+//! USE OF CHILDREN PROP
+//? USE OF CHILDREN PROP
 
 function StepMessage({ kadam, children }) {
   return (
@@ -76,6 +78,7 @@ function StepMessage({ kadam, children }) {
     </p>
   );
 }
+//* USE OF CHILDREN PROP
 
 //! USE OF CHILDREN PROP
 
